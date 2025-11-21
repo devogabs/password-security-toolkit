@@ -11,12 +11,9 @@ Password Security Toolkit (PST) is a lightweight command-line toolkit for analyz
   - Uppercase & lowercase letters
   - Digits
   - Special characters
-  - Common patterns (e.g., repeated characters)
-  - Dictionary-based weakness detection
+  - Common patterns (e.g., repeated characters) (Currently working on it!)
+  - Dictionary-based weakness detection (Currently working on it!)
 
-- **Clear Score System**  
-  Returns a numerical score and a descriptive classification:  
-  *Weak · Moderate · Strong · Very Strong*
 
 - **Detailed Feedback**  
   Explains exactly **why** a password is weak and how to improve it.
@@ -45,13 +42,13 @@ pip install -r requirements.txt
 
 Run the password checker:
 ```bash
-python3 src/main.py --check "your_password_here"
+python3 src/main.py "your_password_here"
 ```
 
 Example output:
 ```bash
-Score: 72/100
-Strength: Strong
+Score: 3/5
+
 
 Feedback:
 - Good length ✔️
