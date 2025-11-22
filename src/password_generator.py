@@ -19,7 +19,7 @@ def generate_password(length: int = 12, use_upper: bool = True, use_lower: bool 
     Raises:
         ValueError: If the length is less than 4 or no character types are selected.
     '''
-    
+
     if length < 4:
         raise ValueError("Password length should be at least 4 characters.")
     
@@ -37,13 +37,13 @@ def generate_password(length: int = 12, use_upper: bool = True, use_lower: bool 
     if not character_pool:
         raise ValueError("At least one character type must be selected.")
     
-    while True:
+    max_attempts = 50
+    for _ in range(max_attempts):
 
         password = ''.join(secrets.choice(character_pool) for _ in range(length)) # list comprehension to build the password
         results = check_password_strength(password)
-        if results['score'] >= 50:
+        if results['score'] >= 3:  # Ensure the generated password meets a minimum strength requirement
             return password
-        else:
-            continue
-
-    
+        
+    # If no strong password is generated after max_attempts, raise an error
+    raise ValueError("Failed to generate a strong password after multiple attempts.")
