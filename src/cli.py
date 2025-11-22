@@ -17,6 +17,7 @@ def cli():
     # Subcommand for generating a secure password
     generate_parser = subparsers.add_parser("generate", help="Generate a secure password")
     generate_parser.add_argument("-l", "--length", type=int, default=12, help="Length of the password (minimum 4, default: 12).")
+    generate_parser.add_argument("-c", "--count", type=int, default=1, help="Number of passwords to generate (default: 1).")
     generate_parser.add_argument("--no-upper", action="store_false", dest="use_upper", help="Exclude uppercase letters.")
     generate_parser.add_argument("--no-lower", action="store_false", dest="use_lower", help="Exclude lowercase letters.")
     generate_parser.add_argument("--no-digits", action="store_false", dest="use_digits", help="Exclude digits.")
@@ -38,14 +39,23 @@ def cli():
     
     elif args.command == "generate":
         try:
-            password = generate_password(
-                length=args.length,
-                use_upper=args.use_upper,
-                use_lower=args.use_lower,
-                use_digits=args.use_digits,
-                use_symbols=args.use_symbols
-            )
-            print(f"Generated Password: {password}")
+            pwds = []
+            for _ in range(args.count):
+                
+                password = generate_password(
+                    length=args.length,
+                    use_upper=args.use_upper,
+                    use_lower=args.use_lower,
+                    use_digits=args.use_digits,
+                    use_symbols=args.use_symbols
+                )
+                pwds.append(password)
+            if args.count > 1:
+                print("Generated Passwords:")
+                for pwd in pwds:
+                    print(f"- {pwd}")
+            else:
+                print(f"Generated Password: {password}")
         except ValueError as ve:
             print(f"Error: {ve}")
 
