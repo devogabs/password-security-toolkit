@@ -99,7 +99,7 @@ requirements.txt
 
   - Improve password scoring model
 
-  - Allow generating multiple passwords (--count)
+  - Allow generating multiple passwords (--count) *(Done! ✅)*
 
   - Improve CLI UX (colors, formatting, subcommands)
 
