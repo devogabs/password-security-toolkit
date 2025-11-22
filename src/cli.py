@@ -2,7 +2,7 @@ from password_checker import check_password_strength
 from password_generator import generate_password
 import argparse
 
-def main():
+def cli():
 
     parser = argparse.ArgumentParser(
         description="Password Security Toolkit: Check password strength or generate secure passwords."
@@ -50,4 +50,4 @@ def main():
             print(f"Error: {ve}")
 
 if __name__ == "__main__":
-    main()
+    cli()
