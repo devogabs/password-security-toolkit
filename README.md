@@ -18,6 +18,9 @@ Password Security Toolkit (PST) is a lightweight command-line toolkit for analyz
 - **Detailed Feedback**  
   Explains exactly **why** a password is weak and how to improve it.
 
+- **Secure Password Generator**
+  Generates a random strong password, following the criteria determined by the user
+
 - **CLI Interface**  
   Simple command-line tool using Python’s `argparse`, fully ready for extension.
 
@@ -42,7 +45,7 @@ pip install -r requirements.txt
 
 Run the password checker:
 ```bash
-python3 src/main.py "your_password_here"
+python3 src/cli.py check "your_password_here"
 ```
 
 Example output:
@@ -56,3 +59,22 @@ Feedback:
 - Contains digits ✔️
 - Contains predictable patterns like '123' ❗
 
+```
+Run the password generator:
+```bash
+python3 src/cli.py generate
+# Example output: "t-!Z1;\5Y~hT"'
+```
+
+---
+## Roadmap
+
+  - **Next Steps:**
+    - Implement password's entropy estimative
+    - Implement breach verification with Bloom Filter
+    - Add strength classifications and normalize the score
+    - Add a "count" argument to the generate command, so you can generate more than one password per go.
+    - Improve CLI (Add some color)
+    - Turn into a instalable package
+    - Optimization
+    - Create automated tests
