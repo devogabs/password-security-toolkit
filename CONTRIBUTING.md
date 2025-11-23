@@ -11,7 +11,7 @@ This document explains how to run the project localy, coding patterns, commits s
 
 2. Clone the fork:
 ```bash
-git clone https://github.com/seu-usuario/password-tool.git
+git clone https://github.com/devogabs/password-tool.git
 cd password-security-toolkit
 ```
 
