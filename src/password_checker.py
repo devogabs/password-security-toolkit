@@ -1,5 +1,6 @@
 import re
 
+
 def check_password_strength(password: str) -> dict:
     score = 0
     feedback = []
@@ -12,12 +13,14 @@ def check_password_strength(password: str) -> dict:
     if re.search(r'[A-Z]', password):
         score += 1
     else:
-        feedback.append("Password should include at least one uppercase letter.")
+        feedback.append(
+            "Password should include at least one uppercase letter.")
 
     if re.search(r'[a-z]', password):
         score += 1
     else:
-        feedback.append("Password should include at least one lowercase letter.")
+        feedback.append(
+            "Password should include at least one lowercase letter.")
 
     if re.search(r'[0-9]', password):
         score += 1
@@ -27,7 +30,8 @@ def check_password_strength(password: str) -> dict:
     if re.search(r'[\W_]', password):
         score += 1
     else:
-        feedback.append("Password should include at least one special character.")
+        feedback.append(
+            "Password should include at least one special character.")
 
     return {
         'score': score,
