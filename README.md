@@ -3,7 +3,7 @@
 <!-- badges -->
 ![Python](https://img.shields.io/badge/Python-3.13%2B-blue)
 ![Status](https://img.shields.io/badge/status-in%20development-yellow)
-![License](https://img.shields.io/badge/license-MIT-green)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC--BY--NC--SA%204.0-blue.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![Style](https://img.shields.io/badge/code%20style-pep8-informational)
 ![Stars](https://img.shields.io/github/stars/devogabs/password-security-toolkit?style=social)
 ![Forks](https://img.shields.io/github/forks/devogabs/password-security-toolkit?style=social)
@@ -34,6 +34,41 @@ Password Security Toolkit (PST) is a lightweight command-line toolkit for analyz
 - **CLI Interface**  
   Clean and extendable command-line interface using Python’s `argparse`.
 
+
+---
+## 🗺 Roadmap
+
+  **Next Steps:**
+
+  * Password Checker:
+  
+    - Add entropy estimation
+
+    - Add breach verification using a Bloom Filter
+
+    - Add pattern detection
+
+    - Improve password scoring model & feedback
+
+  * Password Generator:
+
+    - Allow generating multiple passwords (--count) *(Done! ✅)*
+
+  * CLI:
+  
+    - Improve CLI UX (colors, formatting, subcommands)
+    - Improve --help/usage descriptions
+
+
+  * Miscellaneous & Extras (Future implementations):
+    - Turn into an installable package
+
+    - Performance improvements
+
+    - Add automated unit tests
+
+    - Put more *emojis* into the documentation!! =) *(Done! ✅)*
+
 ---
 
 ## 📦 Installation
@@ -62,7 +97,6 @@ Example output:
 ```bash
 Score: 3/5
 
-
 Feedback:
 - Good length ✔️
 - Contains uppercase letters ✔️
@@ -77,7 +111,8 @@ python3 src/cli.py generate
 ```
 
 ---
-## Project Structure
+
+## 🏛 Project Structure
 ```bash
 src/
  ├── cli.py
@@ -86,25 +121,74 @@ src/
  └── __init__.py
 .gitignore
 README.md
-requirements.txt
+LICENSE
+CONTRIBUTING.md
+.github/
+ ├── ISSUE_TEMPLATE/
+    ├── bug_report.md
+    └── feature_request.md
+ └── PULL_REQUEST_TEMPLATE.md
 ```
 
 ---
-## Roadmap
 
-  **Next Steps:**
-  - Add entropy estimation
+## Best Practices Used
 
-  - Add breach verification using a Bloom Filter
+This project follows several conventions to keep the codebase, commits, and contribution workflow clean and consistent:
 
-  - Improve password scoring model
+### ✦ Commit Style (Conventional Commits)
+Commits follow the format:
 
-  - Allow generating multiple passwords (--count) *(Done! ✅)*
+- `feat:` a new feature  
+- `fix:` bug fix  
+- `docs:` documentation changes  
+- `style:` formatting changes with no logic impact  
+- `refactor:` code improvements that do not change behavior  
+- `test:` adding or updating tests  
+- `chore:` internal tasks with no effect on the tool’s logic  
 
-  - Improve CLI UX (colors, formatting, subcommands)
+More details are available in **CONTRIBUTING.md**.
 
-  - Package and publish as an installable tool
+---
 
-  - Performance improvements
+## Contribution Guide
 
-  - Add automated unit tests
+Contributions are welcome!  
+Please read the full guidelines before opening an issue or submitting a pull request:
+
+👉 **[See CONTRIBUTING.md](CONTRIBUTING.md)**
+
+---
+
+## Issue & Pull Request Templates
+
+This repository includes templates to streamline communication:
+
+- **Bug Report Template**  
+- **Feature Request Template**  
+- **Pull Request Template**
+
+They are located in:  
+`.github/ISSUE_TEMPLATE/` and `.github/pull_request_template.md`
+
+
+---
+## 📄 License
+
+This project is licensed under the **CC BY-NC-SA 4.0** license.
+
+You are free to:
+- **Use**, **modify**, **and share** the code for *noncommercial* purposes  
+- Create derivative works, as long as:
+  - You **credit** the author (Gabriel Bonesso)  
+  - You **share your changes** under the same license  
+
+You are **not allowed to**:
+- Use this project for **commercial purposes**
+- Redistribute adaptations under a more permissive license
+
+Full details are in the [LICENSE](LICENSE) file.
+
+---
+
+Thank you! :3
