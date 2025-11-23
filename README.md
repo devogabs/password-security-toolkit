@@ -29,7 +29,7 @@ Password Security Toolkit (PST) is a lightweight command-line toolkit for analyz
   Explains exactly **why** a password is weak and how to improve it.
 
 - **Secure Password Generator**
-  Generates a random, strong password with costumizable rules.
+  Generates a random, strong password with customizable rules.
 
 - **CLI Interface**  
   Clean and extendable command-line interface using Python’s `argparse`.
