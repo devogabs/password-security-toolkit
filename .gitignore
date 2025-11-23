@@ -1,9 +1,12 @@
+# Byte-compiled
 __pycache__
 pycache
 
+# Virtual environments
 env/
 
+# ideas folder
+notes/
 ideas
 ideas.md
 
-notes/
