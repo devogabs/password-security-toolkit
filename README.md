@@ -86,6 +86,10 @@ Install dependencies:
 pip install -r requirements.txt
 ```
 
+### Requirements
+  * Python 3.13 or above
+  * 'pip' package manager
+
 ## 🖥️ Usage (CLI)
 
 Run the password checker:
